@@ -22,5 +22,15 @@ export default class Villager {
         return this.schedule;
     }
 
-    getVillagersLocation
+    getActivity(day, hour) {
+        const dailySchedule = Array.from(this.schedule.get(day).values());
+        const location = dailySchedule.find(({ startHour, endHour}) => {
+            if (hour >= startHour && hour < endHour) {
+                return true;
+            }
+            return false;
+        })
+
+        return location && location.activity;
+    }
 }
