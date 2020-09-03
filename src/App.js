@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './Button';
+import FarmerRoughHands from './villagers/farmerRoughHands';
+
+const farmerRoughHands = new FarmerRoughHands()
 
 function App() {
   return (
@@ -10,14 +14,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button
+          label="test"
+          onClick={() => {
+            console.log(farmerRoughHands.getActivity('Sunday', 5));
+          }}
+        /> 
       </header>
     </div>
   );
