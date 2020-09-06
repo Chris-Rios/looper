@@ -12,7 +12,7 @@ const sleepActivity = {
 const breakfastActivity = {
     startHour: 5,
     endHour: 6,
-    activity: 'Eat Breakfast',
+    activity: 'Eating Breakfast',
 };
 
 const workActivity = {
