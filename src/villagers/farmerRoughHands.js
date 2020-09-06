@@ -40,7 +40,7 @@ const churchActivity = {
 };
 
 const drinkingActivity = {
-    startHour: 16,
+    startHour: 15,
     endhour: 18,
     activity: 'Drinking at The Vicious Horde'
 };
@@ -72,9 +72,88 @@ schedule.set('Sunday', [
     lunchActivity,
     workActivityAgain,
     churchActivity,
+    {
+        ...drinkingActivity,
+        startHour: 16,
+    },
+    dinnerActivity,
+    readActivity,
+    nightSleepActivity
+]);
+
+schedule.set('Monday', [
+    sleepActivity,
+    breakfastActivity,
+    workActivity,
+    lunchActivity,
+    workActivityAgain,
     drinkingActivity,
     dinnerActivity,
     readActivity,
+    nightSleepActivity
+]);
+
+schedule.set('Tuesday', [
+    sleepActivity,
+    breakfastActivity,
+    workActivity,
+    lunchActivity,
+    workActivityAgain,
+    drinkingActivity,
+    dinnerActivity,
+    readActivity,
+    nightSleepActivity
+]);
+
+schedule.set('Wednesday', [
+    sleepActivity,
+    breakfastActivity,
+    workActivity,
+    lunchActivity,
+    workActivityAgain,
+    churchActivity,
+    drinkingActivity,
+    dinnerActivity,
+    readActivity,
+    nightSleepActivity
+]);
+
+schedule.set('Thursday', [
+    sleepActivity,
+    breakfastActivity,
+    workActivity,
+    lunchActivity,
+    workActivityAgain,
+    {
+        ...drinkingActivity,
+        endHour: 22,
+    },
+    nightSleepActivity
+]);
+
+schedule.set('Friday', [
+    sleepActivity,
+    breakfastActivity,
+    workActivity,
+    lunchActivity,
+    workActivityAgain,
+    {
+        ...drinkingActivity,
+        endHour: 22,
+    },
+    nightSleepActivity
+]);
+
+schedule.set('Saturday', [
+    sleepActivity,
+    breakfastActivity,
+    workActivity,
+    lunchActivity,
+    workActivityAgain,
+    {
+        ...drinkingActivity,
+        endHour: 22,
+    },
     nightSleepActivity
 ]);
 
