@@ -17,49 +17,49 @@ const breakfastActivity = {
 
 const workActivity = {
     startHour: 6,
-    endhour: 11,
+    endHour: 11,
     activity: 'Work the farm'
 };
 
 const lunchActivity = {
     startHour: 11,
-    endhour: 12,
+    endHour: 12,
     activity: 'Lunch'
 };
 
 const workActivityAgain = {
     startHour: 12,
-    endhour: 15,
+    endHour: 15,
     activity: 'Work the farm'
 };
 
 const churchActivity = {
     startHour: 15,
-    endhour: 16,
+    endHour: 16,
     activity: 'Church'
 };
 
 const drinkingActivity = {
     startHour: 15,
-    endhour: 18,
+    endHour: 18,
     activity: 'Drinking at The Vicious Horde'
 };
 
 const dinnerActivity = {
     startHour: 18,
-    endhour: 19,
+    endHour: 19,
     activity: 'Dinner'
 };
 
 const readActivity = {
     startHour: 19,
-    endhour: 21,
+    endHour: 21,
     activity: 'Reading'
 };
 
 const nightSleepActivity = {
     startHour: 21,
-    endhour: 24,
+    endHour: 24,
     activity: 'Sleeping'
 };
 

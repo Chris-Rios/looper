@@ -1,38 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from './logo.svg';
 import './App.css';
 import Button from './Button';
+import Timer from './Timer';
+import { calculateVillageTime } from './timeCalculator';
+import VillagerActivityLog from './villagers/villagerActivityLog';
 import FarmerRoughHands from './villagers/farmerRoughHands';
 import MsBrookfern from './villagers/msBrookfern';
 
 const farmerRoughHands = new FarmerRoughHands();
 const msBrookfern = new MsBrookfern();
 
-const RoughHandsButton = styled(Button)`
-  margin-bottom: 15px;
+const StyledTimer = styled(Timer)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
 `;
+
+
+
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <RoughHandsButton
-          label="See what farmer rough hands is up to"
-          onClick={() => {
-            console.log(farmerRoughHands.getActivity('Sunday', 5));
-          }}
-        />
-        <Button
-          label="See what Ms Brookfern is up to"
-          onClick={() => {
-            console.log(msBrookfern.getActivity('Monday', 13));
-          }}
-        />  
+      <StyledTimer />
+      <VillagerActivityLog
+        villagers={[farmerRoughHands, msBrookfern]}
+        currentTime= {calculateVillageTime()}
+      />
       </header>
     </div>
   );
