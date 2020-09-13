@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { calculateVillageTime } from './timeCalculator';
-import styled from 'styled-components';
-
-
 
 function Timer({ className }) {
 

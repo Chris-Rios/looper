@@ -21,6 +21,8 @@ const calculateDayString = (dayValue) => {
             return 'Friday';
         case 6:
             return 'Saturday';
+        default:
+            return 'Unknown';
     }
 }
 
@@ -33,7 +35,6 @@ const calculateDayString = (dayValue) => {
         hours: newTime.getHours(),
         minutes: newTime.getMinutes()
     }
-    return newTime;
  }
 
 
