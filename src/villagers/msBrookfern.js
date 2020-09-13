@@ -17,7 +17,7 @@ const breakfastActivity = {
 
 const drinkingActivity = {
     startHour: 20,
-    endhour: 18,
+    endhour: 24,
     activity: 'Drinking at The Vicious Horde'
 };
 

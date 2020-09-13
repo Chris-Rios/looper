@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import './App.css';
-import Button from './Button';
 import Timer from './Timer';
-import { calculateVillageTime } from './timeCalculator';
-import VillagerActivityLog from './villagers/villagerActivityLog';
+import ActivityLog from './ActivityLog';
 import FarmerRoughHands from './villagers/farmerRoughHands';
 import MsBrookfern from './villagers/msBrookfern';
 
@@ -20,17 +18,13 @@ const StyledTimer = styled(Timer)`
 `;
 
 
-
-
-
 function App() {
-  return (
+    return (
     <div className="App">
       <header className="App-header">
       <StyledTimer />
-      <VillagerActivityLog
+      <ActivityLog
         villagers={[farmerRoughHands, msBrookfern]}
-        currentTime= {calculateVillageTime()}
       />
       </header>
     </div>
