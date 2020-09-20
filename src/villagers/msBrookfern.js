@@ -17,12 +17,12 @@ const breakfastActivity = {
 
 const drinkingActivity = {
     startHour: 20,
-    endhour: 24,
+    endHour: 24,
     activity: 'Drinking at The Vicious Horde'
 };
 
 const highActivity = {
-    starthour: 12,
+    startHour: 12,
     endHour: 13,
     activity: 'Getting High'
 };
