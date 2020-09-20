@@ -22,6 +22,10 @@ export default class Villager {
         return this.schedule;
     }
 
+    getLastActivity() {
+        return this.lastActivity;
+    }
+
     getActivity(day, hour) {
         const dailySchedule = Array.from(this.schedule.get(day).values());
         const location = dailySchedule.find(({ startHour, endHour}) => {
@@ -30,7 +34,16 @@ export default class Villager {
             }
             return false;
         })
-
+        if (location && location.activity) {
+            if (location.activity === this.getLastActivity()) {
+                console.log(`${this.getName()} is still ${location.activity}`);
+                return location.activity
+            }
+            else {
+                this.lastActivity = location.activity;
+                return location.activity;
+            }
+        }
         return location && location.activity;
     }
 }
