@@ -2,7 +2,7 @@
  * Used to convert real time to game time
  */
 const startTime = Date.now();
-const TIME_MULTIPLIER = 60;
+const TIME_MULTIPLIER = 600;
 
 
 const calculateDayString = (dayValue) => {

@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import VillagerActivityLog from './villagers/villagerActivityLog';
 import { calculateVillageTime } from './timeCalculator';
 
-
+const ActivityLogContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    margin-bottom: 15px;
+`;
 
 function ActivityLog({ villagers }) {
 
@@ -15,12 +22,12 @@ function ActivityLog({ villagers }) {
       });
 
     return (
-        <div>
+        <ActivityLogContainer>
             <VillagerActivityLog
                 villagers={villagers}
                 currentTime={villageTime}
             />
-        </div>
+        </ActivityLogContainer>
     );
 }
 
